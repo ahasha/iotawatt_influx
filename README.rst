@@ -3,16 +3,6 @@ Iotawatt InfluxDB
 =================
 
 
-.. image:: https://img.shields.io/pypi/v/iotawatt_influx.svg
-        :target: https://pypi.python.org/pypi/iotawatt_influx
-
-.. image:: https://img.shields.io/travis/ahasha/iotawatt_influx.svg
-        :target: https://travis-ci.com/ahasha/iotawatt_influx
-
-.. image:: https://readthedocs.org/projects/iotawatt-influx/badge/?version=latest
-        :target: https://iotawatt-influx.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
 
 A functional example of using an `Iotawatt electric consumption monitor`_
  with InfluxDB and Grafana to create useful monitoring dashboards of your
@@ -20,8 +10,6 @@ A functional example of using an `Iotawatt electric consumption monitor`_
 
 
 * Free software: MIT license
-* Documentation: https://iotawatt-influx.readthedocs.io.
-
 
 Features
 --------
