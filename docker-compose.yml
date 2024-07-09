@@ -1,0 +1,31 @@
+version: "2"
+services:
+  grafana:
+    image: grafana/grafana:7.3.6
+    container_name: grafana
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - monitoring
+    volumes:
+      - ${PWD}/grafana/data:/var/lib/grafana
+      - ${PWD}/grafana/provisioning:/etc/grafana/provisioning/
+      - ${PWD}/grafana/dashboards:/etc/dashboards
+  influxdb:
+    image: influxdb:1.8.3
+    container_name: influxdb
+    restart: always
+    ports:
+      - 8086:8086
+    networks:
+      - monitoring
+    volumes:
+      - ${PWD}/influx.db:/var/lib/influxdb
+    environment:
+      - INFLUXDB_DB=iotawatt
+      - INFLUXDB_HTTP_AUTH_ENABLED=true
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=abc123
+networks:
+  monitoring:
